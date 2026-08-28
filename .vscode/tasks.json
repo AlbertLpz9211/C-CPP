@@ -1,0 +1,39 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compilar archivo actual (C/C++)",
+            "type": "shell",
+            "command": "if [ \"${fileExtname}\" = \".c\" ]; then clang -std=c17 -Wall -Wextra -g -I include \"${file}\" -o \"build/${fileBasenameNoExtension}\"; else clang++ -std=c++20 -Wall -Wextra -g -I include \"${file}\" -o \"build/${fileBasenameNoExtension}\"; fi",
+            "options": { "cwd": "${workspaceFolder}" },
+            "group": { "kind": "build", "isDefault": true },
+            "problemMatcher": ["$gcc"],
+            "detail": "clang / clang++ sobre el archivo abierto → build/"
+        },
+        {
+            "label": "CMake: configurar",
+            "type": "shell",
+            "command": "cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug",
+            "options": { "cwd": "${workspaceFolder}" },
+            "problemMatcher": []
+        },
+        {
+            "label": "CMake: compilar todo",
+            "type": "shell",
+            "command": "cmake --build build",
+            "options": { "cwd": "${workspaceFolder}" },
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+            "dependsOn": "CMake: configurar"
+        },
+        {
+            "label": "Ejecutar archivo actual",
+            "type": "shell",
+            "command": "./build/${fileBasenameNoExtension}",
+            "options": { "cwd": "${workspaceFolder}" },
+            "group": { "kind": "test", "isDefault": true },
+            "dependsOn": "Compilar archivo actual (C/C++)",
+            "problemMatcher": []
+        }
+    ]
+}
