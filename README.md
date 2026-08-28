@@ -1,16 +1,33 @@
 # Programación Avanzada — C / C++
 
-Espacio de trabajo para el estudio de programación orientada a objetos en
-C y C++: prácticas, ejercicios y proyectos del curso.
+Espacio de trabajo para la unidad de aprendizaje **Programación Avanzada**
+de la Maestría en Ciencias e Ingeniería (Plan 2018), Unidad Académica de
+Ciencias Básicas e Ingenierías, **Universidad Autónoma de Nayarit**.
 
-## 1. Objetivo
+## 1. Datos de la unidad de aprendizaje
 
-Adquirir un conocimiento integral de la programación, desde los fundamentos
-de la programación orientada a objetos hasta patrones de diseño, programación
-concurrente y gestión eficiente de memoria, con las habilidades teóricas y
-prácticas necesarias para el desarrollo de software de alta complejidad.
+| | |
+|---|---|
+| **Unidad de aprendizaje** | Programación Avanzada |
+| **Tipo** | Especializante · Curso-Taller |
+| **Semestre** | I |
+| **Prerrequisito** | Programación Básica |
+| **Línea de formación** | Inteligencia Artificial y Robótica |
+| **Créditos** | 8 |
+| **Programa elaborado/actualizado** | 14 de febrero de 2024 |
 
-Ejes de trabajo:
+**Distribución de horas:** 40 de teoría · 30 de práctica · 58 de trabajo
+independiente · **128 horas totales**, en sesiones de 4 horas por semana.
+
+## 2. Objetivo
+
+Al culminar la unidad, el estudiante habrá adquirido un conocimiento integral
+de la programación, desde los fundamentos de la programación orientada a
+objetos hasta patrones de diseño, programación concurrente y gestión eficiente
+de memoria, con las habilidades teóricas y prácticas para enfrentar desafíos
+en el desarrollo de software de alta complejidad.
+
+Objetivos declarados en el programa:
 
 1. **Habilidades avanzadas de programación** — uso efectivo de POO e
    implementación de patrones de diseño avanzados.
@@ -19,7 +36,7 @@ Ejes de trabajo:
 3. **Conceptos avanzados** — programación concurrente, gestión eficiente de
    memoria y estructuras de datos avanzadas.
 
-## 2. Contenido temático
+## 3. Contenido temático
 
 ### 1. Introducción
 - 1.1 Paradigma de la programación orientada a objetos y visual
@@ -56,7 +73,22 @@ Ejes de trabajo:
 - 5.4 Control de eventos
 - 5.5 Cajas de diálogo
 
-## 3. Entorno de desarrollo
+## 4. Evaluación
+
+| Rubro | Peso |
+|---|---:|
+| Exposiciones | 20% |
+| Desarrollo de programas | 30% |
+| Exámenes | 20% |
+| Proyecto integrador | 30% |
+
+**Criterios de acreditación:** calificación mínima de 80/100, entrega del 100%
+de las actividades de aprendizaje y asistencia mínima del 90% de las clases.
+
+**Evidencias de aprendizaje:** algoritmos de POO, interfaces de programación
+visual, examen escrito y proyecto integrador.
+
+## 5. Entorno de desarrollo
 
 Configurado para macOS (Apple Silicon) con Apple clang: **C17** y **C++20**,
 compilando con `-Wall -Wextra -Wpedantic`.
@@ -77,7 +109,7 @@ cmake --build build
 Extensiones requeridas (declaradas en `.vscode/extensions.json`):
 `ms-vscode.cpptools`, `ms-vscode.cmake-tools`, `twxs.cmake`.
 
-## 4. Estructura del repositorio
+## 6. Estructura del repositorio
 
 ```
 .
@@ -85,6 +117,7 @@ Extensiones requeridas (declaradas en `.vscode/extensions.json`):
 ├── src/                código fuente de prácticas y ejercicios
 ├── include/            cabeceras propias
 ├── build/              salida de compilación (ignorada)
+├── fuentes-curso/      programa y material del curso (ignorado)
 └── .vscode/            tareas, depuración e IntelliSense
 ```
 
@@ -92,13 +125,16 @@ Convención sugerida para las prácticas: nombrar los archivos por unidad,
 por ejemplo `src/u2_clases.cpp`, `src/u3_herencia.cpp`, `src/u4_polimorfismo.cpp`,
 y registrar cada uno como `add_executable` en `CMakeLists.txt`.
 
-## 5. Bibliografía
+## 7. Acervos de consulta
 
+**Básicos**
 - Taylor, David. *Object Oriented Information Systems: Planning and Implementation*. Wiley, 1992.
 - Larman, Craig. *UML y patrones: introducción al análisis y diseño orientado a objetos*. Prentice Hall, 1999.
 - Winblad, Ann L.; Edwards, Samuel R. *Software orientado a objetos*. Addison-Wesley / Díaz de Santos, 1993.
 - Deitel, Paul; Deitel, Harvey. *Cómo programar en C++*. Pearson, 2014.
 - Deitel, Paul; Deitel, Harvey. *Intro to Python for Computer Science and Data Science*. Pearson, 2020.
 - Cuevas Álvarez, Alberto. *Aplicaciones gráficas en Python*. Ra-Ma, 2018.
+
+**Complementarios**
 - Matthes, Eric. *Curso intensivo de Python*. Anaya Multimedia, 2021.
 - Ramírez Jiménez, Óscar. *Python a fondo*. Marcombo, 2021.
