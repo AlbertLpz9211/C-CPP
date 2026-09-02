@@ -2,17 +2,32 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Depurar archivo actual (LLDB)",
+            "name": "Depurar target de CMake",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/${fileBasenameNoExtension}",
+            "program": "${command:cmake.launchTargetPath}",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": false,
+            "console": "integratedTerminal",
             "MIMode": "lldb",
-            "preLaunchTask": "Compilar archivo actual (C/C++)"
+            "preLaunchTask": "CMake: compilar todo",
+            "presentation": { "order": 1 }
+        },
+        {
+            "name": "Depurar archivo actual",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/quick/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "console": "integratedTerminal",
+            "MIMode": "lldb",
+            "preLaunchTask": "Compilar archivo actual",
+            "presentation": { "order": 2 }
         }
     ]
 }

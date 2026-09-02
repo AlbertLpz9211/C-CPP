@@ -1,11 +1,59 @@
 {
-    "C_Cpp.default.cppStandard": "c++20",
+    // ---- IntelliSense: CMake Tools manda, no hay que duplicar rutas a mano ----
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/build/compile_commands.json",
     "C_Cpp.default.cStandard": "c17",
-    "C_Cpp.default.compilerPath": "/usr/bin/clang++",
+    "C_Cpp.default.cppStandard": "c++20",
     "C_Cpp.formatting": "clangFormat",
-    "C_Cpp.clang_format_fallbackStyle": "LLVM",
+    "C_Cpp.clang_format_style": "file",
+    "C_Cpp.autocompleteAddParentheses": true,
+    // Boton de play (Run/Debug C/C++ File) arriba a la derecha del editor.
+    "C_Cpp.debugShortcut": true,
+
+    // ---- CMake Tools ----
+    "cmake.sourceDirectory": "${workspaceFolder}",
     "cmake.buildDirectory": "${workspaceFolder}/build",
+    "cmake.generator": "Ninja",
     "cmake.configureOnOpen": true,
+    "cmake.configureOnEdit": true,
+    "cmake.buildBeforeRun": true,
+    // Barra de estado con selector de target, build y debug siempre a la vista.
+    "cmake.options.statusBarVisibility": "visible",
+    // El boton de depurar de CMake Tools tambien usa terminal real (para std::cin).
+    "cmake.debugConfig": {
+        "console": "integratedTerminal",
+        "cwd": "${workspaceFolder}"
+    },
+    "cmake.launchBehavior": "breakAndReuseTerminal",
+
+    // ---- Editor ----
+    "editor.formatOnSave": true,
+    "editor.rulers": [100],
     "files.associations": { "*.h": "c", "*.hpp": "cpp" },
-    "editor.formatOnSave": true
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+
+    // ---- Ruido fuera del explorador y de la busqueda ----
+    "files.exclude": {
+        "**/.DS_Store": true
+    },
+    "search.exclude": {
+        "build": true,
+        "compile_commands.json": true,
+        "fuentes-curso": true
+    },
+    "files.watcherExclude": {
+        "**/build/**": true
+    },
+
+    // ---- Code Runner: ejecucion rapida sin tocar la carpeta de CMake ----
+    "code-runner.runInTerminal": true,
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.ignoreSelection": true,
+    "code-runner.cwd": "${workspaceFolder}",
+    "code-runner.executorMap": {
+        "c": "mkdir -p build/quick && clang -std=c17 -Wall -Wextra -Wpedantic -g -I include \"$fullFileName\" -o \"build/quick/$fileNameWithoutExt\" && \"./build/quick/$fileNameWithoutExt\"",
+        "cpp": "mkdir -p build/quick && clang++ -std=c++20 -Wall -Wextra -Wpedantic -g -I include \"$fullFileName\" -o \"build/quick/$fileNameWithoutExt\" && \"./build/quick/$fileNameWithoutExt\""
+    }
 }

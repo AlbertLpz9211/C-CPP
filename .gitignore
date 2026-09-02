@@ -5,3 +5,5 @@ compile_commands.json
 *.out
 *.dSYM/
 fuentes-curso/
+src/*.dSYM/
+.vscode/settings.local.json
