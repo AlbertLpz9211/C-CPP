@@ -116,6 +116,7 @@ Extensiones requeridas (declaradas en `.vscode/extensions.json`):
 ├── CMakeLists.txt      objetivos de compilación (C17 / C++20)
 ├── src/                código fuente de prácticas y ejercicios
 ├── include/            cabeceras propias
+├── exposicion/         material de exposición (ver más abajo)
 ├── build/              salida de compilación (ignorada)
 ├── fuentes-curso/      programa y material del curso (ignorado)
 └── .vscode/            tareas, depuración e IntelliSense
@@ -125,7 +126,22 @@ Convención sugerida para las prácticas: nombrar los archivos por unidad,
 por ejemplo `src/u2_clases.cpp`, `src/u3_herencia.cpp`, `src/u4_polimorfismo.cpp`,
 y registrar cada uno como `add_executable` en `CMakeLists.txt`.
 
-## 7. Acervos de consulta
+## 7. Exposición: paso de argumentos y arreglos
+
+`exposicion/` contiene el material completo de una sesión de 4 horas sobre
+**paso de argumentos por valor y por referencia** y **arreglos y arreglos
+multidimensionales**:
+
+- `exposicion/base-conocimiento/` — apuntes con citas de la norma y de las
+  C++ Core Guidelines; empezar por `00-guion-de-4-horas.md`.
+- `exposicion/src/` — 24 ejemplos ejecutables, compilados como `exp_*` en
+  `build/bin/`.
+- `exposicion/ejercicios/` — tres prácticas con solución.
+- `exposicion/presentacion/` — la presentación en formato LibreOffice Impress.
+
+Ver `exposicion/README.md` para el índice completo.
+
+## 8. Acervos de consulta
 
 **Básicos**
 - Taylor, David. *Object Oriented Information Systems: Planning and Implementation*. Wiley, 1992.

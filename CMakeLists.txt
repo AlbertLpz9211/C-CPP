@@ -61,3 +61,8 @@ foreach(src IN LISTS C_SOURCES CXX_SOURCES)
 endforeach()
 
 message(STATUS "Targets generados en ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
+
+# ---------------------------------------------------------------------------
+# Material de la exposicion (paso de argumentos y arreglos).
+# ---------------------------------------------------------------------------
+add_subdirectory(exposicion)
